@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                dir("C:/Users/N5878/Desktop/Jenkins/test.bat") {
+                    /*execute command in the script directory */
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+         stage('Publish') {
+            steps {
+                bat "C:/Users/N5878/Desktop/Jenkins/test.bat"
+            }
+        }
+    }
+}
