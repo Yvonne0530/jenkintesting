@@ -34,7 +34,7 @@ pipeline {
         }
          stage('Publish') {
             steps {
-                bat ("C:/Users/N5878/Desktop/Jenkins/test.bat")
+                bat "C:/Users/N5878/Desktop/Jenkins/test.bat"
             }
         }
     }
