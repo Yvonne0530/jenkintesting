@@ -38,7 +38,7 @@ pipeline {
 
     stage('Publish') {
       steps {
-        writeFile(file: 'C:\\Users\\N5878\\Desktop\\Jenkins\\result.txt', text: 'Completed !')
+        writeFile(file: 'C:/Users/N5878/Desktop/Jenkins/result.txt', text: 'Completed !')
       }
     }
 
