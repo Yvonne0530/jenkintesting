@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'blueTesting'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       parallel {
