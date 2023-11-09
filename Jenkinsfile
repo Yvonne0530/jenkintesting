@@ -1,9 +1,25 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'blueTesting'
+    }
+
+  }
   stages {
     stage('Build') {
-      steps {
-        echo 'On Progress'
+      parallel {
+        stage('Build') {
+          steps {
+            echo 'On Progress'
+          }
+        }
+
+        stage('Test') {
+          steps {
+            echo 'Building'
+          }
+        }
+
       }
     }
 
